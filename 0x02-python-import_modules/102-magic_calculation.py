@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
+    """ bytecode equal to the one from Holberton """
     from magic_calculation_102 import add, sub
 
     if a < b:
