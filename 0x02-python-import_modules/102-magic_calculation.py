@@ -3,9 +3,9 @@ def magic_calculation(a, b):
     from magic_calculation_102 import add, sub
 
     if a < b:
-        x = add(a, b)
+        c = add(a, b)
         for y in range(4, 6):
-            x = add(x, y)
-            return (x)
+            c = add(c, y)
+            return (c)
     else:
         return (sub(a, b))
