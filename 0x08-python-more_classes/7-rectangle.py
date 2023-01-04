@@ -3,11 +3,11 @@
 
 
 class Rectangle:
-    """Represents rectangle.
+    """Represent rectangle.
 
     Attributes:
         number_of_instances (int): Number of instances of rectangle.
-        print_symbol (any): Symbol to represent a string.
+        print_symbol (any): Symbol used to represent string.
     """
 
     number_of_instances = 0
@@ -17,8 +17,8 @@ class Rectangle:
         """Initialized Rectangle.
 
         Args:
-            width (int): Rectangle Width.
-            height (int): Rectangle Height.
+            width (int): Rectangle width.
+            height (int): Rectangle height.
         """
         type(self).number_of_instances += 1
         self.width = width
@@ -26,7 +26,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get Rectangle Width."""
+        """Get Rectangle width."""
         return self.__width
 
     @width.setter
@@ -39,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get Rectangle Heght."""
+        """Get Rectangle height."""
         return self.__height
 
     @height.setter
@@ -51,19 +51,19 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return Rectangle Area."""
+        """Return Rectangle area."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Return Rectangle Perimeter."""
+        """Return Rectangle perimeter."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return Rectangle Printable Representation.
+        """Return Rectangle printable representation.
 
-        Using # to represent rectangle.
+        Represents rectangle using #.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -76,12 +76,12 @@ class Rectangle:
         return ("".join(rectangle))
 
     def __repr__(self):
-        """Return the string representation of the Rectangle."""
+        """Return string representation of the Rectangle."""
         rectangle = "Rectangle(" + str(self.__width)
         rectangle += ", " + str(self.__height) + ")"
         return (rectangle)
 
     def __del__(self):
-        """Print out message every time deletion of a Rectangle occur."""
+        """Print out message every time there is deletion of Rectangle."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
