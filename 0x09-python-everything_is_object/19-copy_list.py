@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def copy_list(l):
-    return
-copy_list("[1, 2, 3]")
+    fruits = ['apple', 'banana', 'cherry', 'orange']
+    return fruits.copy()
