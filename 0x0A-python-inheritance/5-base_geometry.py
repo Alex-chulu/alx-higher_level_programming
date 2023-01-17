@@ -2,3 +2,5 @@
 
 class BaseGeometry:
     pass
+
+obj = BaseGeometry()
