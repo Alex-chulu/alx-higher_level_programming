@@ -6,11 +6,12 @@
 
 def lookup(obj):
     """
-    The 'dir()' function will return a list of available attributes and
+    The dir() function will return a list of available attributes and
     methods of an object.
 
     Args:
         obj (list): object of the class object
+
     Returns:
         list: list of object
     """
