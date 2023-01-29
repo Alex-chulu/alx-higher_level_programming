@@ -1,0 +1,58 @@
+IMPORT
+        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+ 
+TESTS
+ 
+Test0:
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", "car")
+        Traceback (most recent call last):
+        TypeError: my_int must be an integer
+
+Test1:
+        >>> bg.integer_validator("age", 0)
+        Traceback (most recent call last):
+        ValueError: age must be greater than 0
+
+Test2:
+        >>> bg.integer_validator("distance", -4)
+        Traceback (most recent call last):
+        ValueError: distance must be greater than 0
+
+Test3:
+        >>> bg.area()
+        Traceback (most recent call last):
+        Exception: area() is not implemented
+
+Test4:
+        >>> bg.integer_validator()
+        Traceback (most recent call last):
+        TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test5:
+        >>> bg.integer_validator("age", 1)
+
+Test6:
+        >>> bg.integer_validator("age", (4,))
+        Traceback (most recent call last):
+        TypeError: age must be an integer
+
+Test7:
+        >>> bg.integer_validator("age", [3])
+        Traceback (most recent call last):
+        TypeError: age must be an integer
+
+Test7:
+        >>> bg.integer_validator("age", True)
+        Traceback (most recent call last):
+        TypeError: age must be an integer
+
+Test8:
+        >>> bg.integer_validator("age", {3,4})
+        Traceback (most recent call last):
+        TypeError: age must be an integer
+
+Test9:
+        >>> bg.integer_validator("age", None)
+        Traceback (most recent call last):
+        TypeError: age must be an integer
