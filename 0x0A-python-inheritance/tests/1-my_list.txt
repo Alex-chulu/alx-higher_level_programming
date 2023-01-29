@@ -1,0 +1,40 @@
+IMPORT
+		>>> MyList = __import__('1-my_list').MyList
+
+TESTS
+
+Test0: Add two integers
+        >>> my_list = MyList()
+        >>> my_list.append(3)
+        >>> my_list.append(7)
+        >>> my_list.append(1)
+        >>> print(my_list)
+        [3, 7, 1]
+        >>> my_list.print_sorted()
+        [1, 3, 7]
+        >>> print(my_list)
+        [3, 7, 1]
+
+Test1: Empty list
+        >>> c = MyList()
+        >>> print(c)
+        []
+        >>> c.print_sorted()
+        []
+
+Test2: is instance 
+        >>> d = MyList()
+        >>> isinstance(d, list)
+        True
+
+Test3: Negative values
+        >>> a = MyList()
+        >>> a.append(-5)
+        >>> a.append(-4)
+        >>> a.append(-10)
+        >>> print(a)
+        [-5, -4, -10]
+        >>> a.print_sorted()
+        [-10, -5, -4]
+        >>> print(a)
+        [-5, -4, -10]
