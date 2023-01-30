@@ -16,7 +16,7 @@ if __name__ == '__main__':
         "load the file if it exist"
         load_file += sys.argv[1:]
         "adds all arguments to a Python list"
-        save_to_json_file(list(ls), filename)
+        save_to_json_file(list(load_file), filename)
         "save them to a file"
     else:
         "If the file doesn’t exist, it should be created"
