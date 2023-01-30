@@ -4,6 +4,7 @@
 
 def add_integer(a, b=98):
     """ Returning the addition of two integers, a and b.
+    
     a and b must be integers or floats.
     a and b must be first casted to integers if they are float.
 
