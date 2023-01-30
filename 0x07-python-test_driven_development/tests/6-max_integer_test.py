@@ -19,4 +19,4 @@ class MaxIntTest(unittest.TestCase):
         self.assertTrue(max_integer([True, False]), True)
 
     def max_string_test(self):
-        self.assertEqual(max_integer(["hellow world"]), "hello world")
+        self.assertEqual(max_integer(["hello world"]), "hello world")
