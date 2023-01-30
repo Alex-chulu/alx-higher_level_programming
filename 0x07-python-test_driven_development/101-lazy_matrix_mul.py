@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a function that does matrix multiplication using NumPy."""
+
 import numpy as NumP
 
 
