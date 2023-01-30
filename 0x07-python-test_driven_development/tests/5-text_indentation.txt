@@ -1,0 +1,28 @@
+IMPORT
+		>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+TESTS
+
+Test0: number
+        >>> text_indentation(30)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+Test1: correctly written text
+        >>> text_indentation("This is my car. This is my car and it has: mirrors, doors and body. This car has an open roof")
+        This is the car i own.
+        <BLANKLINE>
+        This car has everything a car need:
+        <BLANKLINE>
+        mirrors, doors and body.
+        <BLANKLINE>
+        It also have an open roof
+        <BLANKLINE>
+        That's the car i own
+
+Test2: correctly written text
+        >>> text_indentation()
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() missing 1 required positional argument: 'text'
