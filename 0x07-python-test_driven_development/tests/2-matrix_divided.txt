@@ -1,0 +1,66 @@
+IMPORT
+		>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+TESTS
+
+Test0: matrix 2x2 with integers
+        >>> matrix = [[1, 2, 3], [7, 8, 9]]
+        >>> matrix_divided(matrix, 3)
+        [[0.33, 0.67, 1.0], [2.33, 2.67, 3.0]]
+
+Test1: matrix 2x2 with floats
+        >>> matrix = [[1.5, 2, 3], [7, 8.5, 9]]
+        >>> matrix_divided(matrix, 3)
+        [[0.5, 0.67, 1.0], [2.33, 2.83, 3.0]]
+
+Test2: matrix empty
+        >>> matrix = []
+        >>> matrix_divided(matrix, 2)
+        Traceback (most recent call last):
+        ...
+        IndexError: list index out of range
+
+Test3: matrix with different size of rows
+        >>> matrix = [[1.5, 2, 3], [7, 8.5, 9, 21], [1, 4, 7]]
+        >>> matrix_divided(matrix, 3)
+        Traceback (most recent call last):
+        ...
+        TypeError: Each row of the matrix must have the same size
+
+Test4: matrix with strings
+        >>> matrix = [[1.5, 2, 3], [7, "8.5", 21]]
+        >>> matrix_divided(matrix, 3)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test5: matrix divided by 0
+        >>> matrix = [[1.5, 2, 3], [7, 8.5, 21]]
+        >>> matrix_divided(matrix, 0)
+        Traceback (most recent call last):
+        ...
+        ZeroDivisionError: division by zero
+
+Test6: matrix divided by string
+        >>> matrix = [[1.5, 2, 3], [7, 8.5, 21]]
+        >>> matrix_divided(matrix, "8")
+        Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+
+Test7: matrix divided by integer
+        >>> matrix = [[1.5, 2, 3], [7, 8.5, 21]]
+        >>> matrix_divided(matrix, 3)
+        [[0.5, 0.67, 1.0], [2.33, 2.83, 7.0]]
+
+Test8: matrix divided by float
+        >>> matrix = [[1.5, 2, 3], [7, 8.5, 21]]
+        >>> matrix_divided(matrix, 2.3)
+        [[0.65, 0.87, 1.3], [3.04, 3.7, 9.13]]
+
+Test9: matrix divided by float
+        >>> matrix = [[3, "9"], [12, 3]]
+        >>> matrix_divided(matrix, 3)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
