@@ -12,13 +12,13 @@ Test1: say the name with only first_name
         My name is Bob 
 
 Test2: say the name with a int as a first_name
-        >>> say_my_name(12, "Bob")
+        >>> say_my_name(10, "Bob")
         Traceback (most recent call last):
         ...
         TypeError: first_name must be a string
 
 Test3: say the name with a int as a last_name
-        >>> say_my_name("Bob", 12)
+        >>> say_my_name("Bob", 10)
         Traceback (most recent call last):
         ...
         TypeError: last_name must be a string
