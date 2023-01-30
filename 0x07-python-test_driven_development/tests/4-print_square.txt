@@ -1,0 +1,45 @@
+IMPORT
+		>>> print_square = __import__('4-print_square').print_square
+
+TESTS
+
+Test0: square with size int
+        >>> print_square(6)
+        ####
+        ####
+        ####
+        ####
+
+Test1: square with size float
+        >>> print_square(8.1)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Test2: square with size a string
+        >>> print_square("8")
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Test3: square with size negative
+        >>> print_square(-1)
+        Traceback (most recent call last):
+        ...
+        ValueError: size must be >= 0
+
+Test4: square with size negative float
+        >>> print_square(-10.1)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Test4: square with size zero
+        >>> print_square(0)
+        
+
+Test4: square without arguments
+        >>> print_square()
+        Traceback (most recent call last):
+        ...
+        TypeError: print_square() missing 1 required positional argument: 'size'
