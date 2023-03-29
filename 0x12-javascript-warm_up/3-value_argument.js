@@ -1,4 +1,2 @@
 #!/usr/bin/node
-function FirstArg() {
-  console.log(arguments[0] || "No arguments");
-}
+console.log(process.argv[2]? process.argv[2]: "No arguments");
