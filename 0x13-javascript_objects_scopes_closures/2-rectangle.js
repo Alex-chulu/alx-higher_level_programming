@@ -7,4 +7,4 @@ constructor (w, h) {
       this.height = h;
     }
   }
-}
+};
