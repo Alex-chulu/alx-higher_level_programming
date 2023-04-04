@@ -2,6 +2,7 @@
 
 import urllib.request
 import sys
+import urllib.parse
 
 if __name__ == "__main__":
 
