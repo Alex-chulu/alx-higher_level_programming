@@ -2,6 +2,7 @@
 const fs = require('fs');
 
 function read_file_content(file_path) {
+    'use strict';
     fs.readFile(file_path, 'utf8', function(err, data) {
         if (err) {
             console.log(err);
