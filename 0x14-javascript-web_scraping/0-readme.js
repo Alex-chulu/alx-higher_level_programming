@@ -1,14 +1,12 @@
 #!/usr/bin/node
-const fs = require('fs');
+const fs = require('fs').promises;
 
-function read_file_content(file_path) {
-    'use strict';
-    fs.readFile(file_path, 'utf8', function(err, data) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(data);
-        }
-    });
+async function readFile(filepath){
+  try{
+    const data = await fs.readFile(filepath);
+    console.log(data.toString());
+} catch (error){
+    console.error('Error reading file: ', error);
+  }
 }
-
+readFile(text.txt);
