@@ -9,4 +9,4 @@ async function readFile(filepath){
     console.error('Error reading file: ', error);
   }
 }
-readFile(text.txt);
+readFile(cisfun);
