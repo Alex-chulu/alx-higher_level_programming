@@ -1,12 +1,10 @@
 #!/usr/bin/node
-const iconv = require('iconv-lite');
+// Include fs module
+const fs = require('fs');
+const filepath = 'cisfun';
+// Calling the readFileSync() method
+// to read 'input.txt' file
+const data = fs.readFileSync(filepath,{encoding:'utf8', flag:'r'});
 
-async function readFile(filepath){
-	try{
-		const data = await fs.readFile(filepath);
-		console.log(iconv.decode(data, 'utf-8'));
-	} catch (error){
-		console.error('Error reading file: ', error);
-	}
-}
-readFile('cisfun');
+// Display the file data
+console.log(data);
